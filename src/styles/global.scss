@@ -1,10 +1,20 @@
 :root {
+    // "Brand" colors
     --color-brand-100: #f1faee;
     --color-brand-200: #a8dadc;
     --color-brand-300: #457b9d;
     --color-brand-400: #1d3557;
     --color-brand-action: #e63946;
     --color-brand-action-2: #ff7d00;
+
+    // Neutral colors
+    --color-neutral-white-1: #ffffff;
+    --color-neutral-white-2: #ededf0;
+    --color-neutral-white-3: #dddde4;
+
+    --color-neutral-gray-1: #b4b4b9;
+    --color-neutral-gray-1: #9d9da3;
+    --color-neutral-gray-1: #808086;
 }
 
 @font-face {
