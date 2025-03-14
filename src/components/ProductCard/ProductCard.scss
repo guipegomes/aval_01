@@ -1,0 +1,46 @@
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 150px;
+    margin: 16px 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-brand-logo-wrapper {
+    width: 80px;           /* Ajuste o tamanho do círculo */
+    height: 80px;          /* Ajuste o tamanho do círculo */
+    border-radius: 50%;    /* Formato circular */
+    overflow: hidden;      /* Garante que a imagem não ultrapasse os limites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-brand-logo {
+    width: 100%;           /* A imagem ocupará toda a div */
+    height: 100%;          /* A imagem ocupará toda a div */
+    object-fit: contain;   /* Mantém a proporção da imagem */
+}
+
+.product-card-body {
+    text-align: center;
+}
+
+.product-card-body h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.product-card-body p {
+    font-size: 14px;
+    margin: 4px 0;
+}
