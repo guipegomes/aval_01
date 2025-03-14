@@ -3,9 +3,11 @@ import './Header.scss'
 
 function Header() {
     return (
-        <header>
-            <h1>TechStack</h1>
-        </header>
+        <div className="header-wrapper">
+            <header>
+                <h1>CyberBazar</h1>
+            </header>
+        </div>
     )
 }
 

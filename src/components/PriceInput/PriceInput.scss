@@ -1,0 +1,5 @@
+@use'../../styles/mixins.scss' as mxs;
+
+.price-input-wrapper {
+    @include mxs.base-input;
+}

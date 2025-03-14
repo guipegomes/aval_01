@@ -1,11 +1,18 @@
 :root {
     // "Brand" colors
-    --color-brand-100: #f1faee;
-    --color-brand-200: #a8dadc;
-    --color-brand-300: #457b9d;
-    --color-brand-400: #1d3557;
-    --color-brand-action: #e63946;
-    --color-brand-action-2: #ff7d00;
+    // --color-brand-100: #f1faee;
+    // --color-brand-200: #a8dadc;
+    // --color-brand-300: #457b9d;
+    // --color-brand-400: #1d3557;
+    // --color-brand-action: #e63946;
+    // --color-brand-action-2: #ff7d00;
+
+    --color-brand-100: #00A3E0;
+    --color-brand-200: #FF0080;
+    --color-brand-200-active: #fd5bac;
+    --color-brand-300: #362446;
+    --color-brand-300-border: #471c6d;
+    --color-brand-400: #282C34;
 
     // Neutral colors
     --color-neutral-white-1: #ffffff;
@@ -13,8 +20,16 @@
     --color-neutral-white-3: #dddde4;
 
     --color-neutral-gray-1: #b4b4b9;
-    --color-neutral-gray-1: #9d9da3;
-    --color-neutral-gray-1: #808086;
+    --color-neutral-gray-2: #9d9da3;
+    --color-neutral-gray-3: #808086;
+
+    --box-shadow: 
+        2px 2px 2px 0px rgba(0, 0, 0, 0.05),
+        -2px -2px 2px 0px rgba(0, 0, 0, 0.05),
+        -2px 2px 2px 0px rgba(0, 0, 0, 0.05),
+        2px -2px 2px 0px rgba(0, 0, 0, 0.05);
+    
+    
 }
 
 @font-face {
@@ -83,8 +98,5 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: 'FiraSans', sans-serif;
 }

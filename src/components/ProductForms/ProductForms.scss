@@ -1,0 +1,14 @@
+.product-selector-wrapper {
+    box-shadow: var(--box-shadow);
+    margin: 16px;
+    justify-self: center;
+    border-radius: 8px;
+    padding: 16px;
+    min-width: 400px;
+    width: 30vw;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: flex-end;
+}

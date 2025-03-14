@@ -1,0 +1,24 @@
+@mixin label-style {
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+@mixin base-input {
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    
+    label {
+        @include label-style;
+    }
+
+    input {
+        padding: 8px;
+        border-radius: 8px;
+        border: 1px solid var(--color-brand-300-border);
+        &:focus {
+            outline: none;
+            border: 1px solid var(--color-brand-200);
+        }
+    }
+}
