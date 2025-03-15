@@ -9,7 +9,12 @@ const TextInput = (properties) => {
     return(
         <div className="text-input">
             <label htmlFor={properties.name}>{properties.label}</label>
-            <input type="text" name={properties.name} placeholder={properties.placeholder} onChange={onInput}/>
+            <input 
+            type="text" 
+            name={properties.name} 
+            placeholder={properties.placeholder} 
+            value={properties.value}
+            onChange={onInput}/>
         </div>
     )
 }

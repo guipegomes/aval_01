@@ -3,13 +3,11 @@ import './ProductSection.scss';
 import ProductCard from "../ProductCard/ProductCard";
 
 const ProductSection = (properties) => {
-    const { nome, products } = properties;
-
-    const productsInSection = products.filter(product => product.section === nome);
+    const productsInSection = properties.products.filter(product => product.section === properties.name);
 
     return (
         <section className="product-section-wrapper">
-            <h3>{nome}</h3>
+            <h3>{properties.name}</h3>
             <div className="product-cards-wrapper">
                 {productsInSection.length > 0 ? (
                     productsInSection.map((product, index) => (
@@ -19,12 +17,12 @@ const ProductSection = (properties) => {
                             name={product.name}
                             price={product.price}
                             isUsed={product.used}
+                            section={properties.name}
                         />
                     ))
                 ) : (
-                    <p>Nenhum produto nesta seção.</p>
+                    <p className="none-text">Nenhum produto nesta seção.</p>
                 )}
-
             </div>
         </section>
     );

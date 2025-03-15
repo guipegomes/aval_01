@@ -31,7 +31,7 @@ const PriceInput = (properties) => {
                 value={ properties.value }
                 name={ properties.name }
                 onChange={(e) => formatPrice(e.target.value)}
-                placeholder="R$ 0,00" />
+                placeholder="R$ 0,00"/>
         </div>
     );
 };

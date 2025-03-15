@@ -4,10 +4,18 @@ import TextInput from "../TextInput/TextInput";
 import PriceInput from "../PriceInput/PriceInput";
 import Button from "../Button/Button";
 import './ProductForms.scss';
+import Toggle from "../Toggle/Toggle";
 
 const ProductForms = (properties) => {
     const sections = properties.sections;
-    const brands = ['Apple', 'Samsung', 'Sony', 'Dell', 'HP'];
+    const brands = [
+        'HP', 
+        'Dell', 
+        'Positivo', 
+        'Asus', 
+        'Apple', 
+        'Outro'
+    ];
 
     const [section, setSection] = useState('');
     const [brand, setBrand] = useState('');
@@ -20,8 +28,17 @@ const ProductForms = (properties) => {
         setOpenSelect(selectName === openSelect ? null : selectName);
     };
 
+    const handleToggleUsed = () => {
+        setUsed(prevState => !prevState);
+    };
+
     const onSave = (e) => {
         e.preventDefault();
+
+        if (!section || !brand || !name || price === "R$ 0,00") {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
 
         properties.onProductRegistered({
             section,
@@ -30,9 +47,7 @@ const ProductForms = (properties) => {
             price,
             used: isUsed,
         });
-    };
 
-    const onClear = () => {
         setSection('');
         setBrand('');
         setName('');
@@ -42,11 +57,12 @@ const ProductForms = (properties) => {
 
     return (
         <section className="product-selector-wrapper">
+            <h1 className="forms-title">Cadastre seu produto</h1>
             <form onSubmit={onSave}>
                 <SelectInput
                     label="Seção"
                     name="section"
-                    options={sections.map(section => section.nome)}
+                    options={sections.map(section => section.name)}
                     isOpen={openSelect === "section"}
                     value={section}
                     onChange={setSection}
@@ -64,6 +80,7 @@ const ProductForms = (properties) => {
                 <TextInput
                     label="Nome"
                     name="name"
+                    value={name}
                     onChange={setName}
                     placeholder="Digite o nome do produto"
                 />
@@ -73,12 +90,12 @@ const ProductForms = (properties) => {
                     value={price}
                     onChange={setPrice}
                 />
+                <div className="toggle-centered">
+                    <Toggle
+                        isUsed={isUsed}
+                        onToggle={handleToggleUsed} />
+                </div>
                 <div className="buttons-wrapper">
-                    <Button
-                        type="button"
-                        text="Limpar"
-                        onClick={onClear}
-                    />
                     <Button
                         type="submit"
                         text="Adicionar"
